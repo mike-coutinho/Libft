@@ -33,4 +33,13 @@ int main()
 	ft_memcpy(b, src1, qq);
 	printf("ft_memcpy = >%s<\n", b);
 
+	char xx[20] = "aaaa";
+	char *mm = "efgh";
+	printf("strlcat = >%s<\n", xx);
+	size_t vv = 3;
+	
+	printf("strlcat = >%ld<\n", ft_strlcat(xx, mm, vv));
+	printf("strlcat = >%s<\n", xx);
+	printf("strlen = >%d<\n", ft_strlen(xx));
+
 }

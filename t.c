@@ -13,12 +13,21 @@ int main(void)
 
 	char a[20] = "aaaaaa";
 	printf("ft_bzero = >%s<\n", a);
-	size_t q = -2;
+	size_t q = 2;
 	bzero(a, q);
 	printf("ft_bzero = >%s<\n", a);
 
 
+	char xx[20] = "aaaa";
+	char *mm = "efgh";
+	printf("strlcat = >%s<\n", xx);
+	size_t vv = 3;
+	
+	printf("strlcat = >%ld<\n", strlcat(xx, mm, vv));
+	printf("strlcat = >%s<\n", xx);
+	printf("strlen = >%ld<\n", strlen(xx));
     return 0;
+    
 }
 
 

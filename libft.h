@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mifranci <mifranci@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: coutinho <coutinho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 19:49:49 by mifranci          #+#    #+#             */
-/*   Updated: 2026/02/24 19:35:55 by mifranci         ###   ########.fr       */
+/*   Updated: 2026/02/24 23:10:51 by coutinho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,7 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *s1, const void *s2, size_t n);
 void	*ft_memmove(void *s1, const void *s2, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dsize);
+size_t ft_strlcat(char *dst, const char *src, size_t dsize);
+
 
 #endif
