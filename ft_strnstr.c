@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mifranci <mifranci@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/24 02:33:21 by mifranci          #+#    #+#             */
-/*   Updated: 2026/02/25 11:40:24 by mifranci         ###   ########.fr       */
+/*   Created: 2026/02/25 15:27:46 by mifranci          #+#    #+#             */
+/*   Updated: 2026/02/25 17:21:29 by mifranci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcat(char *dst, const char *src, size_t dsize)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 {
-	char *ptr1;
-	const char *ptr2;
-	int dst_len;
-	if (dsize <= (size_t)(ft_strlen(dst)))
-		return (ft_strlen((char *)src) + dsize);
-	ptr1 = dst;
-	ptr2 = src;
-	dst_len = ft_strlen(dst);
-	while (*ptr1)
-		ptr1++;
-	ft_memcpy(ptr1, ptr2, dsize - dst_len - 1);
-	ptr1 += dsize - dst_len - 1;
-	*ptr1 = '\0';
-	return (dst_len + ft_strlen((char *)src));
+	char *ptrhay;
+	size_t count;
+	size_t nbr;
+	
+	ptrhay = (char *)haystack;
+	count = 0;
+	nbr = n;
+	while (*ptrhay && nbr > 0)
+	{
+		if ((ft_strncmp(ptrhay, needle, ft_strlen((char *)needle)) == 0) && ((count + ft_strlen((char *)needle)) <= n))
+			return (ptrhay);
+		count++;
+		ptrhay++;
+		nbr--;
+	}
+	return (NULL);
 }

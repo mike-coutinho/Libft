@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mifranci <mifranci@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/24 02:33:21 by mifranci          #+#    #+#             */
-/*   Updated: 2026/02/25 11:40:24 by mifranci         ###   ########.fr       */
+/*   Created: 2026/02/25 12:06:21 by mifranci          #+#    #+#             */
+/*   Updated: 2026/02/25 12:26:31 by mifranci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcat(char *dst, const char *src, size_t dsize)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char *ptr1;
-	const char *ptr2;
-	int dst_len;
-	if (dsize <= (size_t)(ft_strlen(dst)))
-		return (ft_strlen((char *)src) + dsize);
-	ptr1 = dst;
-	ptr2 = src;
-	dst_len = ft_strlen(dst);
-	while (*ptr1)
-		ptr1++;
-	ft_memcpy(ptr1, ptr2, dsize - dst_len - 1);
-	ptr1 += dsize - dst_len - 1;
-	*ptr1 = '\0';
-	return (dst_len + ft_strlen((char *)src));
+	char *p1;
+	char *p2;
+
+	p1 = (char *)s1;
+	p2 = (char *)s2;
+	while ((*p1 || *p2) && (int)n > 0 )
+	{
+		if (*p1 != *p2)
+			return (*p1 - *p2);
+		p1++;
+		p2++;
+		n--;
+	}
+	return (0);
 }

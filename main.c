@@ -34,12 +34,50 @@ int main()
 	printf("ft_memcpy = >%s<\n", b);
 
 	char xx[20] = "aaaa";
-	char *mm = "efgh";
+	char *mm = "efg";
 	printf("strlcat = >%s<\n", xx);
-	size_t vv = 3;
+	size_t vv = 0;
 	
 	printf("strlcat = >%ld<\n", ft_strlcat(xx, mm, vv));
 	printf("strlcat = >%s<\n", xx);
 	printf("strlen = >%d<\n", ft_strlen(xx));
 
+
+	char *cmp = "adaa";
+	char *cmp1 = "adaa";
+	size_t cmp2 = 6;
+	
+	printf("strncmp = >%i<\n", ft_strncmp(cmp, cmp1, cmp2));
+
+	char *cmp4 = "adcaa";
+	int bg = 'c';
+	size_t cmp3 = 3;
+	
+	char *lok = ft_memchr(cmp4, bg, cmp3);
+	printf("ft_memchr = >%p<\n", lok);
+	printf("ft_memchr = >%s<\n", lok);
+
+	char cmp5[] = "adav";
+	char cmp6[] = "adaa";
+	size_t cmp7 = 4;
+	
+	printf("memcmp = >%i<\n", ft_memcmp(cmp5, cmp6, cmp7));
+
+	char cmp8[] = "aaaacaaaaa";
+	char cmp9[] = "caa";
+	size_t cmp10 = 7;
+	
+	printf("ft_strnstr = >%s<\n", ft_strnstr(cmp8, cmp9, cmp10));
+
+
+
+	char po1[20];
+	char *po2 = "aa";
+	po2 = ft_memmove(po1, po2, 3);
+	int av = 0;
+	while (av > 3)
+	{
+		printf("ft_memmove = %c\n", po2[av]);
+		av++;
+	}
 }

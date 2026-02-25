@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mifranci <mifranci@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/24 02:33:21 by mifranci          #+#    #+#             */
-/*   Updated: 2026/02/25 11:40:24 by mifranci         ###   ########.fr       */
+/*   Created: 2026/02/25 11:51:15 by mifranci          #+#    #+#             */
+/*   Updated: 2026/02/25 12:03:00 by mifranci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcat(char *dst, const char *src, size_t dsize)
+char	*ft_strchr(const char *s, int c)
 {
-	char *ptr1;
-	const char *ptr2;
-	int dst_len;
-	if (dsize <= (size_t)(ft_strlen(dst)))
-		return (ft_strlen((char *)src) + dsize);
-	ptr1 = dst;
-	ptr2 = src;
-	dst_len = ft_strlen(dst);
-	while (*ptr1)
-		ptr1++;
-	ft_memcpy(ptr1, ptr2, dsize - dst_len - 1);
-	ptr1 += dsize - dst_len - 1;
-	*ptr1 = '\0';
-	return (dst_len + ft_strlen((char *)src));
+	char *ptr;
+
+	ptr = (char *)s;
+	while (*ptr)
+	{
+		if (*ptr == c)
+			return (ptr);
+		ptr++;
+	}
+	return (ptr);
 }
