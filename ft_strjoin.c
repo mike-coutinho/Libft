@@ -1,38 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mifranci <mifranci@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/25 14:38:05 by mifranci          #+#    #+#             */
-/*   Updated: 2026/02/25 23:02:27 by mifranci         ###   ########.fr       */
+/*   Created: 2026/03/03 23:20:58 by mifranci          #+#    #+#             */
+/*   Updated: 2026/03/03 23:49:39 by mifranci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char *ft_strjoin(char const *s1, char const *s2)
 {
-	char *ptr;
-	
-	ptr = (char *)s;
-	while (n > 0)
-	{
-		if ((unsigned char)*ptr == (unsigned char)c)
-			return (ptr);
-		ptr++;
-		n--;
-	}
-	return (NULL);
+	char *ptr1;
+	char *res;
+
+	ptr1 = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	res = ptr1;
+	ptr1 = ft_memcpy(ptr1, s1, ft_strlen(s1));
+	ptr1 = ft_memcpy(ptr1 + ft_strlen(s1), s2, ft_strlen(s2));
+	ptr1 = ft_memcpy(ptr1 + ft_strlen(s2), "\0", 1);
+
+	return (res);
 }
 
 /*int main()
 {
-	char s64[] = {0, 1, 2 ,3 ,4 ,5};
-	char *lok = ft_memchr(s64, 3, 4);
-	printf("ft_memchr = >%p<\n", lok);
-	printf("ft_memchr = >%i<\n", lok[0]);
+	char *s1 = " a ";
+	char *s2 = "a\0a";
+	char *res = ft_strjoin(s1, s2);
+	printf("res = >%s<\n", res);
 	return 0;
-}
-*/
+}*/

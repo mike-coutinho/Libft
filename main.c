@@ -40,7 +40,7 @@ int main()
 	
 	printf("strlcat = >%ld<\n", ft_strlcat(xx, mm, vv));
 	printf("strlcat = >%s<\n", xx);
-	printf("strlen = >%d<\n", ft_strlen(xx));
+	printf("strlen = >%ld<\n", ft_strlen(xx));
 
 
 	char *cmp = "adaa";
@@ -49,13 +49,7 @@ int main()
 	
 	printf("strncmp = >%i<\n", ft_strncmp(cmp, cmp1, cmp2));
 
-	char *cmp4 = "adcaa";
-	int bg = 'c';
-	size_t cmp3 = 3;
 	
-	char *lok = ft_memchr(cmp4, bg, cmp3);
-	printf("ft_memchr = >%p<\n", lok);
-	printf("ft_memchr = >%s<\n", lok);
 
 	char cmp5[] = "adav";
 	char cmp6[] = "adaa";
@@ -63,11 +57,7 @@ int main()
 	
 	printf("memcmp = >%i<\n", ft_memcmp(cmp5, cmp6, cmp7));
 
-	char cmp8[] = "aaaacaaaaa";
-	char cmp9[] = "caa";
-	size_t cmp10 = 7;
 	
-	printf("ft_strnstr = >%s<\n", ft_strnstr(cmp8, cmp9, cmp10));
 
 
 
@@ -75,9 +65,53 @@ int main()
 	char *po2 = "aa";
 	po2 = ft_memmove(po1, po2, 3);
 	int av = 0;
-	while (av > 3)
+	
+	
+
+	char cmp4[] = "adcaa";
+	char s64[] = {0, 1, 2 ,3 ,4 ,5};
+	int bg = 'a';
+	size_t cmp3 = 3;
+	
+	char *lok = ft_memchr(s64, 0, 1);
+	printf("ft_memchr = >%p<\n", lok);
+	printf("ft_memchr = >%s<\n", lok);
+
+	
+
+	char cmp8[] = "  ";
+	char cmp9[] = "\0\0";
+	size_t cmp10 = 0;
+	printf("ft_strnstr = >%s<\n", ft_strnstr(cmp8, cmp9, cmp10));
+
+/*	int lvmns = 100;
+	int *ptrlx = ft_calloc(lvmns, 1);
+	int i = 0;
+	while (i < lvmns)
 	{
-		printf("ft_memmove = %c\n", po2[av]);
-		av++;
+		printf("res = %i\n", ptrlx[i]);
+		i++;
 	}
+	i = 0;
+	while (i < lvmns)
+	{
+		ptrlx[i] = 223;
+		i++;
+	}
+	i = 0;
+	while (i < lvmns)
+	{
+		printf("res = %i\n", ptrlx[i]);
+		i++;
+	}*/
+	char *substr;
+	substr = "42";
+	
+	int start = 0;
+	int len = 0;
+	
+	printf("s = >%s<, p = %p\n", ft_substr(substr, start, len), ft_substr(substr, start, len));
+	substr = ft_substr(substr, start, len);
+	//free(substr);
+	
 }
