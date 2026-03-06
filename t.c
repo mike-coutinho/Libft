@@ -1,3 +1,38 @@
+char *ft_itoa(int n)
+{
+	char *res;
+	int i;
+	int k;
+	int sign;
+
+	sign = 1;
+	i = 0;
+	k = 1;
+	if (n < 0)
+	{
+		n *= -1;
+		sign *= -1;
+		res = malloc(sizeof(char) * (ft_intlen(n) + 2));
+		res[0] = '-';
+		i++;
+	}
+	else
+		res = malloc(sizeof(char) * (ft_intlen(n) + 1));
+	while (n / k > 9)
+		k *= 10;
+	while (k > 0)
+	{
+		res[i] = ((n / k) % 10) + '0';
+		k /= 10;
+		i++;
+	}
+	res[i] = '\0';
+	return (res);
+}
+
+
+
+
 #include <string.h>
 #include <stdio.h>
 
