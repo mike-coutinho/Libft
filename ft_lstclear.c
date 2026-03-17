@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mifranci <mifranci@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/25 12:06:21 by mifranci          #+#    #+#             */
-/*   Updated: 2026/03/16 13:53:52 by mifranci         ###   ########.fr       */
+/*   Created: 2026/03/09 15:27:50 by mifranci          #+#    #+#             */
+/*   Updated: 2026/03/12 13:23:39 by mifranci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <limits.h>
+#include "libft.h"
+//#include <stdio.h>
+void	ft_lstclear(t_list **lst, void (*del)(void*))
+{
+	t_list	*tmp;
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
-{}
+	if (!lst || !*lst)
+		return ;
+	while (*lst != NULL)
+	{
+		tmp = (*lst)->next;
+		del((*lst)->content);
+		free(*lst);
+		*lst = tmp;
+	}
+	*lst = NULL;
+}
