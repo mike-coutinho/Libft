@@ -62,7 +62,6 @@ You must reimplement standard C library functions with the `ft_` prefix:
 
 ## Part 3 - Linked List Functions
 
-```c
 typedef struct s_list
 {
     void *content;
