@@ -47,6 +47,7 @@ Therefore, it is forbidden to include it in my own prototypes and to compile my 
 > Character classification functions (`ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_isascii`, `ft_isprint`) return `1` if true, `0` otherwise.
 
 > If `nmemb` or `size` is 0, `calloc` must return a unique pointer value that can be successfully passed to free().
+
 > Functions like `strlcpy`, `strlcat`, and `bzero` may require `<bsd/string.h>` and compile with `-lbsd` flag.
 
 ## Part 2 - Additional Functions
