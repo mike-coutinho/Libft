@@ -39,6 +39,19 @@ The libft.a library will be created at the root.
 
 Include it in your projects using #include "libft.h" and link with -L. -lft.
 
+<h1 align="center">Example Usage</h1>
+
+```c
+#include "libft.h"
+
+int main(void)
+{
+    char *s = ft_strjoin("Hello, ", "World!");
+    ft_putstr_fd(s, 1); // Outputs a string to a file descriptor.
+    free(s);
+    return 0;
+}
+`````
 
 <h2 align="center">Technical Considerations</h2>
 
@@ -124,16 +137,3 @@ C Standard Library Documentation
 GNU libc
 
 [42 School Libft PDF]
-
-<h1 align="center">Example Usage</h1>
-```c
-#include "libft.h"
-
-int main(void)
-{
-    char *s = ft_strjoin("Hello, ", "World!");
-    ft_putstr_fd(s, 1); // Outputs a string to a file descriptor.
-    free(s);
-    return 0;
-}
-`````
