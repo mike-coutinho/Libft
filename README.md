@@ -27,6 +27,12 @@ This library demonstrates understanding of **memory management, string manipulat
 git clone <repository_url>
 cd <project_folder>
 make
+/*
+make all // Same as make
+make clean // Deletes .o files
+make fclean // clean command and deletes libft.a
+make re // runs fclean and all commands
+*/
 ````
 
 The `libft.a` library is created at the root.
