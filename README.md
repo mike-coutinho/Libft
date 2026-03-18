@@ -57,23 +57,41 @@ This part implements functions not present in libc or available in a different f
 |----------|-----------|-------------|
 | `ft_substr` | `char *ft_substr(char const *s, unsigned int start, size_t len)` | Returns a substring from `s`. |
 | `ft_strjoin` | `char *ft_strjoin(char const *s1, char const *s2)` | Concatenates `s1` and `s2`. |
-| `ft_strtrim` | `char *ft_strtrim(char const *s1, char const *set)` | Removes characters from `set` at the start and end of `s1`. |
+| `ft_strtrim` | `char *ft_strtrim(char const *s1, char const *set)` | Returns a copy of ’s1’ with characters from ’set’ removed. |
 | `ft_split` | `char **ft_split(char const *s, char c)` | Splits `s` by delimiter `c`. |
 | `ft_itoa` | `char *ft_itoa(int n)` | Converts integer to string. |
 | `ft_strmapi` | `char *ft_strmapi(char const *s, char (*f)(unsigned int, char))` | Applies `f` to each character and returns a new string. |
 | `ft_striteri` | `void ft_striteri(char *s, void (*f)(unsigned int, char *))` | Applies `f` to each character in place. |
-| `ft_putchar_fd` | `void ft_putchar_fd(char c, int fd)` | Writes a character to a file descriptor. |
-| `ft_putstr_fd` | `void ft_putstr_fd(char *s, int fd)` | Writes a string to a file descriptor. |
-| `ft_putendl_fd` | `void ft_putendl_fd(char *s, int fd)` | Writes a string followed by newline to fd. |
-| `ft_putnbr_fd` | `void ft_putnbr_fd(int n, int fd)` | Writes an integer to fd. |
+| `ft_putchar_fd` | `void ft_putchar_fd(char c, int fd)` | Outputs a character to a file descriptor. |
+| `ft_putstr_fd` | `void ft_putstr_fd(char *s, int fd)` | Outputs a string to a file descriptor. |
+| `ft_putendl_fd` | `void ft_putendl_fd(char *s, int fd)` | Outputs a string followed by newline to fd. |
+| `ft_putnbr_fd` | `void ft_putnbr_fd(int n, int fd)` | Outputs an integer to fd. |
 
 ## Part 3 - Linked List Functions
 
+Here’s a clean, compact, README-friendly version:
+
+````markdown id="8zv1ks"
+Memory and string manipulation functions are useful, but linked lists provide more flexibility.
+
+This part introduces functions to manipulate linked lists using the following structure:
+
+```c
 typedef struct s_list
 {
     void *content;
     struct s_list *next;
 } t_list;
+````
+
+* `content`: data stored in the node (`void *` allows any type)
+* `next`: pointer to the next node, or `NULL` if it is the last
+
+The following functions are implemented to manage and use linked lists.
+
+```
+```
+
 | Function        | Prototype                                                                 | Description                                |
 | --------------- | ------------------------------------------------------------------------- | ------------------------------------------ |
 | ft_lstnew       | `t_list *ft_lstnew(void *content)`                                        | Creates a new node.                        |
