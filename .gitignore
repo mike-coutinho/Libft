@@ -1,2 +1,7 @@
-# Ignore directories
 tester/
+42_common_core.code-workspace
+.gitignore
+a.out
+c.c
+t.c
+test.c
