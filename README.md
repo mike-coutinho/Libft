@@ -1,10 +1,11 @@
 <div align="center">
   This project has been created as part of the 42 curriculum by mifranci.
+  # Libft
 </div>
 
 
 
-# Libft
+
 
 # Description
 This project is designed to [briefly describe your project — e.g., create a custom library, implement a specific algorithm, develop a mini application].  
