@@ -74,11 +74,11 @@ Memory and string manipulation functions are useful, but linked lists provide mo
 This part introduces functions to manipulate linked lists using the following structure:
 
 ```c
-typedef struct s_list
+typedef struct      s_list
 {
-    void *content;
-    struct s_list *next;
-} t_list;
+    void            *content;
+    struct s_list   *next;
+}                   t_list;
 ````
 
 * `content`: data stored in the node (`void *` allows any type)
