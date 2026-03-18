@@ -18,8 +18,8 @@
 
 <h2 align="center">Description</h2>
 
-This project implements **Libft**, your very first custom C library.  
-Its goal is to recreate standard C library functions with your own versions, and extend functionality with additional utility and linked list functions.  
+This project implements **Libft**, my very first custom C library.  
+Its goal is to recreate standard C library functions with my own versions, and extend functionality with additional utility and linked list functions.  
 This library demonstrates understanding of **memory management, string manipulation, and data structures** in C.  
 
 <h2 align="center">Technical Considerations</h2>
@@ -30,7 +30,7 @@ This library demonstrates understanding of **memory management, string manipulat
 - Submitting unused files is not allowed.
 - Every `.c` file must compile with the flags: `-Wall -Wextra -Werror`.
 - Use the `ar` command to create the library; **libtool is forbidden**.
-- `libft.a` library must be at the root of your repository.  
+- `libft.a` library must be at the root of the repository.  
 
 <h2 align="center">Library Details</h2>
 
