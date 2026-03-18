@@ -1,7 +1,4 @@
 <div align="center">
-
-  An overview of all my projects can be found here: 
-
   This project has been created as part of the 42 curriculum by mifranci.
 </div>
 
