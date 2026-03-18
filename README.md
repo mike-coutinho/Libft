@@ -69,9 +69,6 @@ This part implements functions not present in libc or available in a different f
 
 ## Part 3 - Linked List Functions
 
-Here’s a clean, compact, README-friendly version:
-
-````markdown id="8zv1ks"
 Memory and string manipulation functions are useful, but linked lists provide more flexibility.
 
 This part introduces functions to manipulate linked lists using the following structure:
@@ -89,8 +86,6 @@ typedef struct s_list
 
 The following functions are implemented to manage and use linked lists.
 
-```
-```
 
 | Function        | Prototype                                                                 | Description                                |
 | --------------- | ------------------------------------------------------------------------- | ------------------------------------------ |
