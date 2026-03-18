@@ -51,6 +51,7 @@ Therefore, it is forbidden to include it in my own prototypes and to compile my 
 > Functions like `strlcpy`, `strlcat`, and `bzero` may require `<bsd/string.h>` and compile with `-lbsd` flag.
 
 ## Part 2 - Additional Functions
+This part implements functions not present in libc or available in a different form.
 
 | Function | Prototype | Description |
 |----------|-----------|-------------|
