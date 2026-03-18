@@ -16,13 +16,13 @@
 6. [AI Usage](#ai-usage)
 7. [Example Usage](#example-usage)
 
-<h1 align="center">Description</h1>
+<h2 align="center">Description</h2>
 
 This project implements **Libft**, your very first custom C library.  
 Its goal is to recreate standard C library functions with your own versions, and extend functionality with additional utility and linked list functions.  
 This library demonstrates understanding of **memory management, string manipulation, and data structures** in C.  
 
-<h1 align="center">Technical Considerations</h1>
+<h2 align="center">Technical Considerations</h2>
 
 - Declaring global variables is strictly forbidden.  
 - Helper functions for complex functions must be `static` to restrict scope.  
@@ -32,7 +32,7 @@ This library demonstrates understanding of **memory management, string manipulat
 - Use the `ar` command to create your library; **libtool is forbidden**.  
 - Your `libft.a` library must be at the root of your repository.  
 
-<h1 align="center">Library Details</h1>
+<h2 align="center">Library Details</h2>
 
 ## Part 1 - Libc Functions
 You must reimplement standard C library functions with the `ft_` prefix:
