@@ -66,6 +66,7 @@ int main(void)
 - Every `.c` file must compile with the flags: `-Wall -Wextra -Werror`.
 - Use the `ar` command to create the library; **libtool is forbidden**.
 - `libft.a` library must be at the root of the repository.
+- Code must be in accordance with the Norm from 42.
 
 <h2 align="center">Library Details</h2>
 
