@@ -6,6 +6,7 @@
 
 <h2 align="center"> 📑 Table of Contents</h2>
 # Library Details
+# Library Details
 1. [Description](#description)
 2. [Library Details](#library-details)
 3. [Instructions](#instructions)
