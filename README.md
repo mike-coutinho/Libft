@@ -24,13 +24,13 @@ This library demonstrates understanding of **memory management, string manipulat
 
 <h2 align="center">Technical Considerations</h2>
 
-- Declaring global variables is strictly forbidden.  
-- Helper functions for complex functions must be `static` to restrict scope.  
-- All files must be placed at the **root** of the repository.  
-- Submitting unused files is not allowed.  
-- Every `.c` file must compile with the flags: `-Wall -Wextra -Werror`.  
-- Use the `ar` command to create your library; **libtool is forbidden**.  
-- Your `libft.a` library must be at the root of your repository.  
+- Declaring global variables is strictly forbidden.
+- Helper functions for complex functions must be `static` to restrict scope.
+- All files must be placed at the **root** of the repository.
+- Submitting unused files is not allowed.
+- Every `.c` file must compile with the flags: `-Wall -Wextra -Werror`.
+- Use the `ar` command to create the library; **libtool is forbidden**.
+- `libft.a` library must be at the root of your repository.  
 
 <h2 align="center">Library Details</h2>
 
