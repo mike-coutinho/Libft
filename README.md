@@ -7,13 +7,13 @@
 
 1. [Description](#description)
 2. [Instructions](#instructions)
-3. [Technical Considerations](#technical-considerations)
-4. [Library Details](#library-details)
+3. [Example Usage](#example-usage)
+4. [Technical Considerations](#technical-considerations)
+5. [Library Details](#library-details)
    - [Part 1 - Libc Functions](#part-1---libc-functions)
    - [Part 2 - Additional Functions](#part-2---additional-functions)
    - [Part 3 - Linked List Functions](#part-3---linked-list-functions)
-5. [Resources](#resources)
-7. [Example Usage](#example-usage)
+6. [Resources](#resources)
 
 <h2 align="center">Description</h2>
 
@@ -39,7 +39,7 @@ The libft.a library will be created at the root.
 
 Include it in your projects using #include "libft.h" and link with -L. -lft.
 
-<h1 align="center">Example Usage</h1>
+<h2 align="center">Example Usage</h2>
 
 ```c
 #include "libft.h"
