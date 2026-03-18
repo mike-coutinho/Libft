@@ -6,7 +6,7 @@
 /*   By: mifranci <mifranci@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 12:31:24 by mifranci          #+#    #+#             */
-/*   Updated: 2026/03/03 15:14:34 by mifranci         ###   ########.fr       */
+/*   Updated: 2026/03/18 09:35:45 by mifranci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,3 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
-
