@@ -126,16 +126,14 @@ GNU libc
 [42 School Libft PDF]
 
 <h1 align="center">Example Usage</h1>
+```c
 #include "libft.h"
-#include <stdio.h>
 
-int main() {
+int main(void)
+{
     char *s = ft_strjoin("Hello, ", "World!");
-    printf("%s\n", s);
+    ft_putstr_fd(s, 1); // Outputs a string to a file descriptor.
     free(s);
     return 0;
 }
-
-
-
-z
+`````
