@@ -23,21 +23,25 @@ This library demonstrates understanding of **memory management, string manipulat
 
 <h2 align="center">Instructions</h2>
 
-Clone the repository:
-
+```bash
 git clone <repository_url>
-
-Navigate to the project folder:
-
 cd <project_folder>
-
-Compile library:
-
 make
+````
 
-The libft.a library will be created at the root.
+The `libft.a` library is created at the root.
 
-Include it in your projects using #include "libft.h" and link with -L. -lft.
+Include it in your code:
+
+```c
+#include "libft.h"
+```
+
+Compile with:
+
+```bash
+-L. -lft
+```
 
 <h2 align="center">Example Usage</h2>
 
