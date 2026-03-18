@@ -70,23 +70,23 @@ int main(void)
 <h2 align="center">Library Details</h2>
 
 ## Part 1 - Libc Functions
-Standard C library functions must be reimplement with the `ft_` prefix:
+Functions are reimplement with the `ft_` prefix:
 
 - **Character classification**: `ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_isascii`, `ft_isprint`  
 - **String & memory**: `ft_strlen`, `ft_memset`, `ft_bzero`, `ft_memcpy`, `ft_memmove`, `ft_strlcpy`, `ft_strlcat`, `ft_toupper`, `ft_tolower`, `ft_strchr`, `ft_strrchr`, `ft_strncmp`, `ft_memchr`, `ft_memcmp`, `ft_strnstr`, `ft_atoi`  
 - **Memory allocation**: `ft_calloc`, `ft_strdup`
 
 > Some of the function prototypes needed to reimplement use the ’restrict’ qualifier. This keyword is part of the C99 standard.
-Therefore, it is forbidden to include it in my own prototypes and to compile my code with the -std=c99 flag.
+It is forbidden to include it in the prototypes and to compile it with the -std=c99 flag.
 
 > Character classification functions (`ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_isascii`, `ft_isprint`) return `1` if true, `0` otherwise.
 
-> If `nmemb` or `size` is 0, `calloc` must return a unique pointer value that can be successfully passed to free().
+> If `nmemb` or `size` is 0, `calloc` returns a unique pointer value that can be successfully passed to free().
 
 > Functions like `strlcpy`, `strlcat`, and `bzero` may require `<bsd/string.h>` and compile with `-lbsd` flag.
 
 ## Part 2 - Additional Functions
-This part implements functions not present in libc or available in a different form.
+Functions not present in libc or available in a different form.
 
 | Function | Prototype | Description |
 |----------|-----------|-------------|
@@ -104,9 +104,7 @@ This part implements functions not present in libc or available in a different f
 
 ## Part 3 - Linked List Functions
 
-Memory and string manipulation functions are useful, but linked lists provide more flexibility.
-
-This part introduces functions to manipulate linked lists using the following structure:
+Functions to manipulate linked lists using the following structure:
 
 ```c
 typedef struct      s_list
@@ -134,10 +132,6 @@ The following functions are implemented to manage and use linked lists.
 | ft_lstiter      | `void ft_lstiter(t_list *lst, void (*f)(void *))`                         | Applies a function to each node’s content. |
 | ft_lstmap       | `t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))` | Creates a new list applying `f`.           |
 
-<h1 align="center">Resources</h1>
+<h2 align="center">Resources</h2>
 
-C Standard Library Documentation
-
-GNU libc
-
-[42 School Libft PDF]
+Library Functions Manual
