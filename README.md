@@ -1,15 +1,11 @@
 <div align="center">
-  <a href="https://github.com/ahokcool/ahokcool/blob/main/README.md">
-    <img src="images/alexgit.png" alt="ahokcool" width="150">
-  </a><br>
-  An overview of all my projects can be found here: <a href="https://github.com/ahokcool/ahokcool/blob/main/README.md" target="_blank">ahokcool</a><br><br>
-  <a href="https://www.42lisboa.com">
-    <img src="images/logo42.png" alt="42" width="100">
-  </a><br>
-  This project was created as part of my studies at: <a href="https://www.42lisboa.com" target="_blank">42 Lisboa</a><br>
+
+  An overview of all my projects can be found here: 
+
+  This project has been created as part of the 42 curriculum by mifranci.
 </div>
 
-This project has been created as part of the 42 curriculum by mifranci.
+
 
 # Libft
 
