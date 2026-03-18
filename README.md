@@ -6,14 +6,13 @@
 <h2 align="center"> 📑 Table of Contents</h2>
 
 1. [Description](#description)
-2. [Technical Considerations](#technical-considerations)
-3. [Library Details](#library-details)
+2. [Instructions](#instructions)
+3. [Technical Considerations](#technical-considerations)
+4. [Library Details](#library-details)
    - [Part 1 - Libc Functions](#part-1---libc-functions)
    - [Part 2 - Additional Functions](#part-2---additional-functions)
    - [Part 3 - Linked List Functions](#part-3---linked-list-functions)
-4. [Instructions](#instructions)
 5. [Resources](#resources)
-6. [AI Usage](#ai-usage)
 7. [Example Usage](#example-usage)
 
 <h2 align="center">Description</h2>
@@ -22,7 +21,7 @@ This project implements **Libft**, my very first custom C library.
 Its goal is to recreate standard C library functions with my own versions, and extend functionality with additional utility and linked list functions.  
 This library demonstrates understanding of **memory management, string manipulation, and data structures** in C.
 
-<h1 align="center">Instructions</h1>
+<h2 align="center">Instructions</h2>
 
 Clone the repository:
 
