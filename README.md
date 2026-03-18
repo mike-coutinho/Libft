@@ -30,7 +30,11 @@ This library demonstrates understanding of **memory management, string manipulat
 - Submitting unused files is not allowed.
 - Every `.c` file must compile with the flags: `-Wall -Wextra -Werror`.
 - Use the `ar` command to create the library; **libtool is forbidden**.
-- `libft.a` library must be at the root of the repository.  
+- `libft.a` library must be at the root of the repository.
+`Some of the function prototypes I need to reimplement use the
+’restrict’ qualifier. This keyword is part of the C99 standard.
+Therefore, it is forbidden to include it in my own prototypes and
+to compile my code with the -std=c99 flag.`
 
 <h2 align="center">Library Details</h2>
 
