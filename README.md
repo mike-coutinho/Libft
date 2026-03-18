@@ -20,7 +20,26 @@
 
 This project implements **Libft**, my very first custom C library.  
 Its goal is to recreate standard C library functions with my own versions, and extend functionality with additional utility and linked list functions.  
-This library demonstrates understanding of **memory management, string manipulation, and data structures** in C.  
+This library demonstrates understanding of **memory management, string manipulation, and data structures** in C.
+
+<h1 align="center">Instructions</h1>
+
+Clone the repository:
+
+git clone <repository_url>
+
+Navigate to the project folder:
+
+cd <project_folder>
+
+Compile library:
+
+make
+
+The libft.a library will be created at the root.
+
+Include it in your projects using #include "libft.h" and link with -L. -lft.
+
 
 <h2 align="center">Technical Considerations</h2>
 
@@ -98,24 +117,6 @@ The following functions are implemented to manage and use linked lists.
 | ft_lstclear     | `void ft_lstclear(t_list **lst, void (*del)(void *))`                     | Deletes all nodes.                         |
 | ft_lstiter      | `void ft_lstiter(t_list *lst, void (*f)(void *))`                         | Applies a function to each node’s content. |
 | ft_lstmap       | `t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))` | Creates a new list applying `f`.           |
-
-<h1 align="center">Instructions</h1>
-
-Clone the repository:
-
-git clone <repository_url>
-
-Navigate to the project folder:
-
-cd <project_folder>
-
-Compile library:
-
-make
-
-The libft.a library will be created at the root.
-
-Include it in your projects using #include "libft.h" and link with -L. -lft.
 
 <h1 align="center">Resources</h1>
 
