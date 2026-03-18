@@ -126,12 +126,6 @@ GNU libc
 
 [42 School Libft PDF]
 
-<h1 align="center">AI Usage</h1>
-
-AI was used for drafting README structure, formatting, and examples.
-
-Core function logic, memory management, and linked list implementation were written manually.
-
 <h1 align="center">Example Usage</h1>
 #include "libft.h"
 #include <stdio.h>
