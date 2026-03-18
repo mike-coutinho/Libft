@@ -23,7 +23,7 @@ This library demonstrates understanding of **memory management, string manipulat
 
 <h2 align="center">Instructions</h2>
 
-```
+```bash
 git clone <repository_url>
 cd <project_folder>
 make
@@ -33,13 +33,13 @@ The `libft.a` library is created at the root.
 
 Include it in your code:
 
-```
+```c
 #include "libft.h"
 ```
 
 Compile with:
 
-```
+```bash
 libft.a
 ```
 
