@@ -3,12 +3,11 @@
 </div>
 
 <h1 align="center">Libft</h1>
-<h2 align="center"> 📑 Table of Contents</h2>
+<h2 align="center"> 📑 TOC</h2>
 
 1. [Description](#description)
 2. [Instructions](#instructions)
 3. [Example Usage](#example-usage)
-4. [Technical Considerations](#technical-considerations)
 5. [Library Details](#library-details)
    - [Part 1 - Libc Functions](#part-1---libc-functions)
    - [Part 2 - Additional Functions](#part-2---additional-functions)
@@ -19,7 +18,7 @@
 
 This project implements **Libft**, my very first custom C library.  
 Its goal is to recreate standard C library functions with my own versions, and extend functionality with additional utility and linked list functions.  
-This library demonstrates understanding of **memory management, string manipulation, and data structures** in C.
+This library demonstrates understanding of **memory management, string manipulation, pointer arithmetic, and data structures** in C.
 
 <h2 align="center">Instructions</h2>
 
@@ -27,12 +26,6 @@ This library demonstrates understanding of **memory management, string manipulat
 git clone <repository_url>
 cd <project_folder>
 make
-/*
-make all // Same as make
-make clean // Deletes .o files
-make fclean // clean command and deletes libft.a
-make re // runs fclean and all commands
-*/
 ````
 
 The `libft.a` library is created at the root.
@@ -49,6 +42,13 @@ Compile with:
 libft.a
 ```
 
+```
+make all/make # Builds the library
+make clean    # Removes object files(.o)
+make fclean   # Removes object files(.o) and the library(.a)
+make re       # Remove .o, .a and rebuilds
+```
+
 <h2 align="center">Example Usage</h2>
 
 ```c
@@ -57,12 +57,14 @@ libft.a
 int main(void)
 {
     char *s = ft_strjoin("Hello, ", "World!");
+    if (!s)
+        return (1);
     ft_putstr_fd(s, 1); // Outputs a string to a file descriptor.
     free(s);
-    return 0;
+    return (0);
 }
 `````
-
+<!--
 <h2 align="center">Technical Considerations</h2>
 
 - Declaring global variables is strictly forbidden.
@@ -73,26 +75,22 @@ int main(void)
 - Use the `ar` command to create the library; **libtool is forbidden**.
 - `libft.a` library must be at the root of the repository.
 - Code must be in accordance with the Norm from 42.
+-->
 
 <h2 align="center">Library Details</h2>
 
-## Part 1 - Libc Functions
+### Part 1 - Libc Functions
 Functions are reimplement with the `ft_` prefix:
 
 - **Character classification**: `ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_isascii`, `ft_isprint`  
 - **String & memory**: `ft_strlen`, `ft_memset`, `ft_bzero`, `ft_memcpy`, `ft_memmove`, `ft_strlcpy`, `ft_strlcat`, `ft_toupper`, `ft_tolower`, `ft_strchr`, `ft_strrchr`, `ft_strncmp`, `ft_memchr`, `ft_memcmp`, `ft_strnstr`, `ft_atoi`  
 - **Memory allocation**: `ft_calloc`, `ft_strdup`
 
-> Some of the function prototypes needed to reimplement use the ’restrict’ qualifier. This keyword is part of the C99 standard.
-It is forbidden to include it in the prototypes and to compile it with the -std=c99 flag.
-
-> Character classification functions (`ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_isascii`, `ft_isprint`) return `1` if true, `0` otherwise.
-
 > If `nmemb` or `size` is 0, `calloc` returns a unique pointer value that can be successfully passed to free().
 
 > Functions like `strlcpy`, `strlcat`, and `bzero` may require `<bsd/string.h>` and compile with `-lbsd` flag.
 
-## Part 2 - Additional Functions
+### Part 2 - Additional Functions
 Functions not present in libc or available in a different form.
 
 | Function | Prototype | Description |
@@ -109,20 +107,17 @@ Functions not present in libc or available in a different form.
 | `ft_putendl_fd` | `void ft_putendl_fd(char *s, int fd)` | Outputs a string followed by newline to fd. |
 | `ft_putnbr_fd` | `void ft_putnbr_fd(int n, int fd)` | Outputs an integer to fd. |
 
-## Part 3 - Linked List Functions
+### Part 3 - Linked List Functions
 
 Functions to manipulate linked lists using the following structure:
 
 ```c
-typedef struct      s_list
+typedef struct  s_list
 {
     void            *content;
     struct s_list   *next;
-}                   t_list;
+}  t_list;
 ````
-
-* `content`: data stored in the node (`void *` allows any type)
-* `next`: pointer to the next node, or `NULL` if it is the last
 
 The following functions are implemented to manage and use linked lists.
 
@@ -141,4 +136,5 @@ The following functions are implemented to manage and use linked lists.
 
 <h2 align="center">Resources</h2>
 
-Library Functions Manual
+- Library Functions Manual
+- [LibftTester by Tripouille](https://github.com/Tripouille/libftTester)
