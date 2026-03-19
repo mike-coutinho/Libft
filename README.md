@@ -16,9 +16,12 @@
 
 <h2 align="center">Description</h2>
 
-This project implements **Libft**, my very first custom C library.  
-Its goal is to recreate standard C library functions with my own versions, and extend functionality with additional utility and linked list functions.  
-This library demonstrates understanding of **memory management, string manipulation, pointer arithmetic, and data structures** in C.
+<p align="center">
+  This project implements <b>Libft</b>, my very first custom C library.<br>
+  Its goal is to recreate standard C library functions with my own versions, and extend functionality with additional utility and linked list functions.<br>
+  This library demonstrates understanding of <b>memory management, string manipulation, pointer arithmetic, and data structures</b> in C.
+</p>
+
 
 <h2 align="center">Instructions</h2>
 
@@ -30,7 +33,7 @@ make
 
 The `libft.a` library is created at the root.
 
-Include it in your code:
+Include in your code:
 
 ```c
 #include "libft.h"
@@ -79,8 +82,9 @@ int main(void)
 
 <h2 align="center">Library Details</h2>
 
-### Part 1 - Libc Functions
-Functions are reimplement with the `ft_` prefix:
+<h3 align="center">Part 1 - Libc Functions</h3>
+
+<p align="center">Functions are reimplement with the `ft_` prefix:</p>
 
 - **Character classification**: `ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_isascii`, `ft_isprint`  
 - **String & memory**: `ft_strlen`, `ft_memset`, `ft_bzero`, `ft_memcpy`, `ft_memmove`, `ft_strlcpy`, `ft_strlcat`, `ft_toupper`, `ft_tolower`, `ft_strchr`, `ft_strrchr`, `ft_strncmp`, `ft_memchr`, `ft_memcmp`, `ft_strnstr`, `ft_atoi`  
@@ -90,8 +94,9 @@ Functions are reimplement with the `ft_` prefix:
 
 > Functions like `strlcpy`, `strlcat`, and `bzero` may require `<bsd/string.h>` and compile with `-lbsd` flag.
 
-### Part 2 - Additional Functions
-Functions not present in libc or available in a different form.
+<h3 align="center">Part 2 - Additional Functions</h3>
+
+<p align="center">Functions not present in libc or available in a different form.</p>
 
 | Function | Prototype | Description |
 |----------|-----------|-------------|
@@ -107,9 +112,9 @@ Functions not present in libc or available in a different form.
 | `ft_putendl_fd` | `void ft_putendl_fd(char *s, int fd)` | Outputs a string followed by newline to fd. |
 | `ft_putnbr_fd` | `void ft_putnbr_fd(int n, int fd)` | Outputs an integer to fd. |
 
-### Part 3 - Linked List Functions
+<h3 align="center">Part 3 - Linked List Functions</h3>
 
-Functions to manipulate linked lists using the following structure:
+<p align="center">Functions to manipulate linked lists using the following structure:</p>
 
 ```c
 typedef struct  s_list
@@ -118,9 +123,6 @@ typedef struct  s_list
     struct s_list   *next;
 }  t_list;
 ````
-
-The following functions are implemented to manage and use linked lists.
-
 
 | Function        | Prototype                                                                 | Description                                |
 | --------------- | ------------------------------------------------------------------------- | ------------------------------------------ |
