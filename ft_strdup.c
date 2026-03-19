@@ -6,13 +6,13 @@
 /*   By: mifranci <mifranci@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 15:11:49 by mifranci          #+#    #+#             */
-/*   Updated: 2026/03/03 15:47:46 by mifranci         ###   ########.fr       */
+/*   Updated: 2026/03/19 00:50:57 by mifranci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *str)
+char	*ft_strdup(const char *str)
 {
 	char	*ptr;
 	size_t	i;

@@ -6,31 +6,37 @@
 /*   By: mifranci <mifranci@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/04 00:28:56 by mifranci          #+#    #+#             */
-/*   Updated: 2026/03/13 15:52:35 by mifranci         ###   ########.fr       */
+/*   Updated: 2026/03/19 01:41:55 by mifranci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	count_words(char const *s, char c)
+{
+	int	words;
+
+	words = 0;
+	while (*s)
+	{
+		while (*s == c)
+			s++;
+		if (*s)
+			words++;
+		while (*s != c && *s)
+			s++;
+	}
+	return (words);
+}
+
 char	**ft_split(char const *s, char c)
 {
-	char **res;
-	char const *ptr1;
-	int i;
-	int j;
-	int words;
+	char	**res;
+	int		i;
+	int		j;
+	int		words;
 
-	ptr1 = s;
-	words = 0;
-	while (*ptr1)
-	{
-		while (*ptr1 == c)
-			ptr1++;
-		if (*ptr1 != c && *ptr1)
-			words++;
-		while (*ptr1 != c && *ptr1)
-			ptr1++;
-	}
+	words = count_words(s, c);
 	res = malloc(sizeof(*res) * (words + 1));
 	j = 0;
 	while (*s)
@@ -38,13 +44,12 @@ char	**ft_split(char const *s, char c)
 		i = 0;
 		while (*s == c)
 			s++;
-		if (*s != c && *s)
+		if (*s)
 		{
 			while (s[i] != c && s[i])
 				i++;
-			res[j] = ft_strndup(s, i);
+			res[j++] = ft_strndup(s, i);
 		}
-		j++;
 		s += i;
 	}
 	res[words] = NULL;
@@ -72,11 +77,3 @@ char	**ft_split(char const *s, char c)
 	free(res);
 	return 0;
 }*/
-
-
-/*	res = ft_split("aaa", 'b');
-	while (*res)
-	{
-		printf(">%s<\n", *res);
-		res++;
-	}*/

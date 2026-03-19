@@ -6,7 +6,7 @@
 /*   By: mifranci <mifranci@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 23:39:48 by mifranci          #+#    #+#             */
-/*   Updated: 2026/03/12 19:02:39 by mifranci         ###   ########.fr       */
+/*   Updated: 2026/03/19 00:50:43 by mifranci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*tmp;
 
 	if (lst == NULL)
-		return NULL;
+		return (NULL);
 	tmp = lst;
 	new_lst = NULL;
 	while (tmp != NULL)

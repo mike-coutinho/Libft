@@ -6,16 +6,16 @@
 /*   By: mifranci <mifranci@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 18:36:02 by coutinho          #+#    #+#             */
-/*   Updated: 2026/03/03 11:52:06 by mifranci         ###   ########.fr       */
+/*   Updated: 2026/03/19 01:46:55 by mifranci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
-int ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
-	char *ptr;
-	int sign;
-	int res;
+	char	*ptr;
+	int		sign;
+	int		res;
 
 	ptr = (char *)nptr;
 	sign = 1;

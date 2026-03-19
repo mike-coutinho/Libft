@@ -6,15 +6,15 @@
 /*   By: mifranci <mifranci@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 12:27:10 by mifranci          #+#    #+#             */
-/*   Updated: 2026/03/13 19:30:00 by mifranci         ###   ########.fr       */
+/*   Updated: 2026/03/19 01:46:19 by mifranci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void *ptr;
+	void	*ptr;
 
 	if (nmemb * size == 0)
 		return (malloc(0));

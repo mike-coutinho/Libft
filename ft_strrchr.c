@@ -6,7 +6,7 @@
 /*   By: mifranci <mifranci@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 11:55:50 by mifranci          #+#    #+#             */
-/*   Updated: 2026/03/03 15:33:22 by mifranci         ###   ########.fr       */
+/*   Updated: 2026/03/19 01:40:50 by mifranci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,23 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char *ptr;
-	int len;
+	int	len;
 
-	ptr = (char *)s;
-	len = ft_strlen(ptr);
+	len = ft_strlen(s);
 	while (len >= 0)
-	{
-		if ((unsigned char)ptr[len] == (unsigned char)c)
-			return (&ptr[len]);
-		len--;
-	}
+		if ((unsigned char)s[len--] == (unsigned char)c)
+			return ((char *)&s[++len]);
 	return (NULL);
 }
 
-/*int main()
+/*#include <stdio.h>
+int main()
 {
-	char s[] = "tripouille";
-	printf("ft_strrchr = >%s<\n", ft_strrchr(s, 't'));
-	printf("ft_strrchr = >%s<\n", ft_strrchr(s, 'l'));
-	printf("ft_strrchr = >%s<\n", ft_strrchr(s, 'z'));
-	printf("ft_strrchr = >%s<\n", ft_strrchr(s, '\0' + 256));
-	printf("ft_strrchr = >%s<\n", ft_strrchr(s, 0 + 256));
-	printf("ft_strrchr = >%s<\n", ft_strrchr(s, 0));
-	printf("ft_strrchr = >%s<\n", ft_strrchr(s, '\0'));
-	printf("ft_strrchr = >%s<\n", ft_strrchr(s, 't' + 256));
+	char s[] = "abcdefgfahj";
+	printf("ft_strchr = >%s<\n", ft_strrchr(s, 'a'));
+	printf("ft_strchr = >%s<\n", ft_strrchr(s, 'f'));
+	printf("ft_strchr = >%s<\n", ft_strrchr(s, 'j'));
+	printf("ft_strchr = >%s<\n", ft_strrchr(s, 'z'));
+	printf("ft_strchr = >%s<\n", ft_strrchr(s, '\0'));
 	return (0);
 }*/

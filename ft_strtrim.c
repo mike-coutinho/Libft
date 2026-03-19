@@ -6,17 +6,17 @@
 /*   By: mifranci <mifranci@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 23:50:28 by mifranci          #+#    #+#             */
-/*   Updated: 2026/03/04 00:19:51 by mifranci         ###   ########.fr       */
+/*   Updated: 2026/03/19 01:45:47 by mifranci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int i;
-	char *ptr1;
-	char *res;
+	int		i;
+	char	*ptr1;
+	char	*res;
 
 	i = 0;
 	ptr1 = (char *)s1;
@@ -30,7 +30,7 @@ char *ft_strtrim(char const *s1, char const *set)
 	ptr1 = res;
 	while (*s1)
 	{
-		if (!(ft_strchr(set, *s1)))
+		if (!ft_strchr(set, *s1))
 		{
 			ptr1 = ft_memcpy(ptr1, s1, 1);
 			ptr1++;

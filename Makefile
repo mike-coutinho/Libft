@@ -13,22 +13,26 @@ FLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 RM = rm -f
 
-# Files -----------------------------
-
+# Compilation rules -----------------------------
+# Compile each .c file into a .o file
 %.o: %.c
-	$(COMP) $(FLAGS) -c $^ -o $@
+	$(COMP) $(FLAGS) -c $<
 
+# Archive all object files into the static library
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $^
 
-# Commands --------------------------
-
+# Targets --------------------------
+# Builds the library
 all: $(NAME)
 
+# Removes object files(.o)
 clean:
-	rm -f $(OBJS)
+	$(RM) $(OBJS)
 
+#Removes object files(.o) and the library(.a)
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
+# Rebuilds everything from scratch
 re: fclean all

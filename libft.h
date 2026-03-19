@@ -6,7 +6,7 @@
 /*   By: mifranci <mifranci@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 19:49:49 by mifranci          #+#    #+#             */
-/*   Updated: 2026/03/11 23:40:43 by mifranci         ###   ########.fr       */
+/*   Updated: 2026/03/19 00:50:02 by mifranci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,11 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
-typedef struct	s_list
+typedef struct s_list
 {
-void			*content;
-struct s_list	*next;
-}				t_list;
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);

@@ -6,25 +6,24 @@
 /*   By: mifranci <mifranci@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 14:21:22 by mifranci          #+#    #+#             */
-/*   Updated: 2026/03/09 15:40:49 by mifranci         ###   ########.fr       */
+/*   Updated: 2026/03/19 00:35:18 by mifranci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
+
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
 	if (!(lst))
 		return ;
 	del(lst->content);
-	del(lst);
+	free(lst);
 }
 
-/*int main(int argc, char **argv)
+/*#include <stdio.h>
+int main()
 {
 	t_list *node = ft_lstnew(malloc(5));
-	ft_lstdelone(node, free);
-	node = NULL;
 	ft_lstdelone(node, free);
 	return (0);
 }*/

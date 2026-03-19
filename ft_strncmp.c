@@ -6,19 +6,22 @@
 /*   By: mifranci <mifranci@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 12:06:21 by mifranci          #+#    #+#             */
-/*   Updated: 2026/03/18 08:50:30 by mifranci         ###   ########.fr       */
+/*   Updated: 2026/03/18 21:01:08 by mifranci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <limits.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	(void) *s1;
-	(void) s2;
-	(void) n;
-	return (1);
+	while (n-- > 0 && (*s1 || *s2))
+		if ((unsigned char)*s1++ != (unsigned char)*s2++)
+			return ((unsigned char)*--s1 - (unsigned char)*--s2);
+	return (0);
 }
 
+/*int main()
+{
+	printf("res = %i\n", ft_strncmp("aa", "ab", 2)); 
+	return 0;
+}*/
