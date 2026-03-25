@@ -6,11 +6,29 @@
 /*   By: mifranci <mifranci@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/04 00:28:56 by mifranci          #+#    #+#             */
-/*   Updated: 2026/03/19 01:41:55 by mifranci         ###   ########.fr       */
+/*   Updated: 2026/03/25 21:36:11 by mifranci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static char	*ft_strndup(const char *str, size_t n)
+{
+	char	*ptr;
+	size_t	i;
+
+	ptr = malloc(sizeof(char) * (n + 1));
+	if (!(ptr))
+		return (NULL);
+	i = 0;
+	while (i < n)
+	{
+		ptr[i] = str[i];
+		i++;
+	}
+	ptr[i] = '\0';
+	return (ptr);
+}
 
 static int	count_words(char const *s, char c)
 {
