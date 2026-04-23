@@ -23,8 +23,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 	nbr = n;
 	while (*haystack && nbr-- > 0)
 	{
-		if ((ft_strncmp(haystack, needle, ft_strlen((char *)needle)) == 0)
-			&& ((count + ft_strlen((char *)needle)) <= n))
+		if ((ft_strncmp(haystack, needle, ft_strlen(needle)) == 0)
+			&& ((count + ft_strlen(needle)) <= n))
 			return ((char *)haystack);
 		count++;
 		haystack++;
