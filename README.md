@@ -1,6 +1,4 @@
-<div align="center">
-  This project has been created as part of the 42 curriculum by mifranci.
-</div>
+*This project has been created as part of the 42 curriculum by mifranci.*
 
 <h1 align="center">Libft</h1>
 <h2 align="center"> 📑 TOC</h2>
@@ -140,3 +138,5 @@ typedef struct  s_list
 
 - Library Functions Manual
 - [LibftTester by Tripouille](https://github.com/Tripouille/libftTester)
+- I used AI as I would use google, AI can reduce alot of time spent on finding the resource to learn.
+- AI used to help write this readme.
