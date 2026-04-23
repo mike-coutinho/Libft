@@ -37,6 +37,17 @@ char	*writetostring(char *str, int k, int i, long n)
 	return (str);
 }
 
+char	*handle_neg(long *nbr, int *sign, char *res, int i)
+{
+	*nbr *= -1;
+	*sign *= -1;
+	res = malloc(sizeof(char) * (ft_intlen(*nbr) + 2));
+	if (!res)
+		return (NULL);
+	res[i++] = '-';
+	return (res);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*res;
@@ -49,18 +60,15 @@ char	*ft_itoa(int n)
 	sign = 1;
 	i = 0;
 	k = 1;
+	res = NULL;
 	if (n == 0)
 		return (writetostring(malloc(sizeof(char) * (2)), k, i, nbr));
 	if (nbr < 0)
-	{
-		nbr *= -1;
-		sign *= -1;
-		res = malloc(sizeof(char) * (ft_intlen(nbr) + 2));
-		res[0] = '-';
-		i++;
-	}
+		res = handle_neg(&nbr, &sign, res, i++);
 	else
 		res = malloc(sizeof(char) * (ft_intlen(nbr) + 1));
+	if (!res)
+		return (NULL);
 	while (nbr / k > 9)
 		k *= 10;
 	return (writetostring(res, k, i, nbr));
