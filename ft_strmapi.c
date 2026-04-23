@@ -27,6 +27,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	i = 0;
 	res = ft_strdup(s);
+	if (!result)
+		return (NULL);
 	while (res[i])
 	{
 		res[i] = f(i, res[i]);
