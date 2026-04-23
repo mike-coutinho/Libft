@@ -36,3 +36,5 @@ fclean: clean
 
 # Remove .o, .a and rebuilds
 re: fclean all
+
+.PHONY: all clean fclean re
