@@ -11,28 +11,20 @@
 /* ************************************************************************** */
 
 // #include <stdio.h>
-int	ft_atoi(const char *nptr)
+int	ft_atoi(const char *ptr)
 {
-	char	*ptr;
 	int		sign;
 	int		res;
 
-	ptr = (char *)nptr;
-	sign = 1;
+	sign = -1;
 	res = 0;
 	while (*ptr == ' ' || (*ptr >= 9 && *ptr <= 13))
 		ptr++;
 	if (*ptr == '-' || *ptr == '+')
-	{
-		if (*ptr == '-')
-			sign *= -1;
-		ptr++;
-	}
+		if (*ptr++ == '-')
+			sign = 1;
 	while (*ptr >= '0' && *ptr <= '9')
-	{
-		res = (res * 10) + (*ptr - '0');
-		ptr++;
-	}
+		res = (res * 10) - (*ptr++ - '0');
 	return (res * sign);
 }
 
