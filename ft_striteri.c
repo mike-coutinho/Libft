@@ -12,15 +12,6 @@
 
 #include "libft.h"
 
-/*int main()
-{
-	char res[] = "1234";
-	ft_striteri(res, ft_subchr);
-	printf("res = %s\n", res);
-	ft_striteri(res, ft_showindex);
-	printf("res = %s\n", res);
-	return 0;
-}*/
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int		i;
